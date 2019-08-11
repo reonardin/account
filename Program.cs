@@ -39,11 +39,19 @@ namespace Project_a
             string pickup = Console.ReadLine();
             Console.Write("Please enter drop-off date <MM/dd/yyyy> :");
             string dropoff = Console.ReadLine();
-      
 
+
+            if (DateTime.TryParse(pickup, out dpick))
+            {
+                String.Format("{MM/dd/yyyy}", dpick);
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
             try
             {
-                string.Format("{MM/dd/yyyy}");
+
                 dpick = Convert.ToDateTime(pickup);
                 ddrop = Convert.ToDateTime(dropoff);
             }
